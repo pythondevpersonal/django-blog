@@ -10,6 +10,8 @@ cryptography==37.0.4
 cssselect==1.1.0
 datefinder==0.7.1
 Django==4.0.6
+django-seed==0.3.1
+Faker==13.15.0
 filelock==3.7.1
 h2==3.2.0
 hpack==3.0.0
@@ -43,6 +45,7 @@ service-identity==21.1.0
 six==1.16.0
 sqlparse==0.4.2
 tldextract==3.3.1
+toposort==1.7
 Twisted==21.2.0
 typing_extensions==4.3.0
 urllib3==1.26.10

@@ -19,5 +19,6 @@ from . import views
 app_name = 'core'
 
 urlpatterns = [
-    path('',views.IndexView.as_view(),name="index")
+    path('',views.IndexView.as_view(),name="index"),
+    path('view',views.SingleView.as_view(),name="single")
 ]

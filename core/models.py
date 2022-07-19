@@ -15,10 +15,10 @@ class Core(models.Model):
     published = models.DateTimeField(default=datetime.now)
     
     def get_absolute_url(self):
-        return reverse('core:single',args=[self.slug])
+        return reverse('view',args=[self.slug])
     
     class Meta:
         ordering = ['published']
     
     def __str__(self) :
-        return self.title
+        return self.title + ' | ' +self.description

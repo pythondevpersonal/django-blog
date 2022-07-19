@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from django.views.generic import ListView, CreateView, UpdateView
+from django.views.generic import ListView, CreateView, UpdateView, View
 
 from core.models import Core
 
@@ -8,7 +8,12 @@ from core.models import Core
 
 class IndexView(ListView):
     model: Core
-    context_object_name: 'latest_posts'
+    
+    def get_queryset(self):
+        return Core.objects.all()
+
+class SingleView(View):
+    model: Core
     
     def get_queryset(self):
         return Core.objects.all()
